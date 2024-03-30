@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 
 class Command(ABC):
     @abstractmethod
-    def execute(self):
+    def execute(self, args):
         pass
 
 class NoSuchCommandError(Exception):
@@ -19,6 +19,7 @@ class CommandHandler:
         try:
             command_class = self.commands[command_name]
             command_instance = command_class()
-            command_instance.execute(*args)
+            command_instance.execute(args)
         except KeyError:
             raise NoSuchCommandError(f"No such command: {command_name}")
+
