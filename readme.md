@@ -44,11 +44,28 @@ class AppFacade:
         pass
     ```
 
-**2. Environment Variables Usage:**These environment variables are conveniently loaded from a .env file using the python-dotenv library, providing a streamlined approach to manage application configurations and settings without hardcoding them into the source code.
-*Example snippet:*
+**2. Environment Variables Usage:**an example of using environment variables can be seen where a method getEnvironmentVariable()
 ```python
 def getEnvironmentVariable(self, envvar: str = 'ENVIRONMENT'):
    return self.settings[envvar]
 ```
-**3. Logging:**These messages are stored in a designated file named app.log, situated within a dedicated directory called logs. The logging level is configured to INFO, ensuring that only informative messages are logged. Additionally, a customized format is specified for the log messages, enhancing readability and providing valuable insights into the application's runtime behavior.
+**3. Logging:**logging is used to record various events such as user choices in the menu, execution of commands, errors, etc. The logging module is imported and used to create logs.
+Here is the link to the implementation of the logging  in thecode: https://github.com/vybhg/midterm/tree/main/logs
 
+b. Setup the python environment
+
+```python
+sudo apt update -y
+sudo apt install python3-pip
+pip3 --version
+(the above commands will update the wsl-2 and installs the python-3 packages)
+pip3 install virtualenv (This command will install virtual environment)
+virtualenv venv (This command will create a virtual environment venu)
+source ./venv/bin/activate (This command will activate the virtual environment.)
+pip3 install -r requirments.txt (This command will install all the required packages)
+pytest (Runs the tests)
+pytest --pylint  (Runs tests with pylint static code analysis)
+pytest --pylint --cov (Runs tests, pylint, and coverage to check if you have all your code tested.)
+python3 main.py 
+```
+link for video:
