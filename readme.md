@@ -2,7 +2,7 @@
 
 **1. Design Patterns Used:**
 **a. Command Pattern:** The Command Pattern encapsulates a request as an object, thereby allowing parameterization of clients with different requests, queuing, logging, and supporting undoable operations. It promotes loose coupling between the sender and receiver of a request. The classes Command, CommandHandler, and concrete command classes like AdditionCommand, SubtractionCommand, etc., demonstrate the Command Pattern.
-Here is the link to the implementation of the Command Pattern in the code: 
+Here is the link to the implementation of the Command Pattern in the code: https://github.com/vybhg/midterm/blob/main/app/commands/__init__.py
 ```
 **b. Factory Pattern:** Utilized in the AppFactory class to dynamically create instances of command objects based on specified packages.
 
