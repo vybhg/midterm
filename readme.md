@@ -33,7 +33,7 @@ class AppFactory:
                             continue
         return commands ```
 
-*c. Facade Pattern:* Applied in the AppFacade class to provide a simplified interface (perform_data_manipulation()) to complex operations (Pandas data manipulation).
+*c. Facade Pattern:* In the AppFacade class, the Facade Pattern is utilized to offer a simplified interface, perform_data_manipulation(), which hides the complexity of underlying Pandas data manipulation operations. This pattern provides a high-level, user-friendly interface that encapsulates multiple steps or operations into a single method call. By using the Facade Pattern, the codebase becomes more organized, easier to understand, and less coupled to the intricacies of Pandas data manipulation, promoting better maintainability and readability.
 
 *Code snipped:*
 
