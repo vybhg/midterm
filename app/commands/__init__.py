@@ -1,46 +1,36 @@
-from abc import ABC, abstractmethod
+import pandas as pd
 
-class Command(ABC):
-    """Abstract base class for commands."""
-    
-    @abstractmethod
-    def execute(self, *args):
-        """Abstract method to execute the command."""
-        pass
-
-class NoSuchCommandError(Exception):
-    """Exception raised when a command is not found."""
-    
-    def __init__(self, command_name):
-        super().__init__(f"No such command: {command_name}")
-
-class CommandHandler:
-    """Class to handle registration and execution of commands."""
-    
+class CalculationHistory:
     def __init__(self):
-        self.commands = {}
+        self.history = pd.DataFrame()
 
-    def register_command(self, command_name: str, command_class):
-        """Register a command with the handler."""
-        self.commands[command_name] = command_class
+    def add_entry(self, operation, num1, num2, result):
+        new_entry = pd.DataFrame({'Operation': [operation], 'Number1': [num1], 'Number2': [num2], 'Result': [result]})
+        if self.history.empty:
+            self.history = new_entry
+        else:
+            self.history = pd.concat([self.history, new_entry], ignore_index=True)
 
-    def execute_command(self, command_name: str, *args):
-        """Execute a registered command."""
+    def display_history(self):
+        print(self.history)
+
+    def save_history(self, filename):
+        if not filename.endswith('.csv'):
+            filename += '.csv'
+        self.history.to_csv(filename, index=False)
+        print(f"History saved to {filename}.")
+
+    def clear_history(self):
+        self.history = pd.DataFrame(columns=['Operation', 'Number1', 'Number2', 'Result'])
+        print("History cleared.")
+
+    def delete_entry(self, index):
         try:
-            command_class = self.commands[command_name]
-            command_instance = command_class()
-            command_instance.execute(*args)
+            self.history.drop(index, inplace=True)
+            print("Entry deleted.")
         except KeyError:
-            raise NoSuchCommandError(command_name)
+            print("Invalid index. Entry does not exist.")
 
-def main():
-    # Example usage of the CommandHandler class
-    handler = CommandHandler()
-    handler.register_command("my_command", MyCommandClass)
-    handler.execute_command("my_command", arg1, arg2)
-
-if __name__ == "__main__":
-    main()
 
 
 
