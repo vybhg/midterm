@@ -37,7 +37,7 @@ class AppFactory:
 
 *Code snipped:*
 
-```python
+`python
 class AppFacade:
     @staticmethod
     def perform_data_manipulation(data):
