@@ -4,8 +4,7 @@
 **a. Command Pattern:** The Command Pattern encapsulates a request as an object, thereby allowing parameterization of clients with different requests, queuing, logging, and supporting undoable operations. It promotes loose coupling between the sender and receiver of a request. The classes Command, CommandHandler, and concrete command classes like AdditionCommand, SubtractionCommand, etc., demonstrate the Command Pattern.
 Here is the link to the implementation of the Command Pattern in the code: https://github.com/vybhg/midterm/blob/main/app/commands/__init__.py
 ```
-**b. Factory Pattern:** The Factory Pattern is employed within the AppFactory class to dynamically generate instances of command objects based on specified packages. This pattern abstracts the process of object creation, allowing the client code (in this case, the AppFactory) to create objects without needing to know the specific class or implementation details. By using the Factory Pattern, the code gains flexibility and extensibility, as new command objects can be added or modified without directly modifying the client code.
-
+b.Factory pattern:The Factory Pattern is employed within the AppFactory class to dynamically generate instances of command objects based on specified packages. This pattern abstracts the process of object creation, allowing the client code (in this case, the AppFactory) to create objects without needing to know the specific class or implementation details. By using the Factory Pattern, the code gains flexibility and extensibility, as new command objects can be added or modified without directly modifying the client code.
 *Code snipped:*
 ```python
 import pkgutil
@@ -32,12 +31,11 @@ class AppFactory:
                         except TypeError:
                             continue
         return commands ```
-
-*c. Facade Pattern:* In the AppFacade class, the Facade Pattern is utilized to offer a simplified interface, perform_data_manipulation(), which hides the complexity of underlying Pandas data manipulation operations. This pattern provides a high-level, user-friendly interface that encapsulates multiple steps or operations into a single method call. By using the Facade Pattern, the codebase becomes more organized, easier to understand, and less coupled to the intricacies of Pandas data manipulation, promoting better maintainability and readability.
-
+```
+c.Facade Pattern:In the AppFacade class, the Facade Pattern is utilized to offer a simplified interface, perform_data_manipulation(), which hides the complexity of underlying Pandas data manipulation operations. This pattern provides a high-level, user-friendly interface that encapsulates multiple steps or operations into a single method call. By using the Facade Pattern, the codebase becomes more organized, easier to understand, and less coupled to the intricacies of Pandas data manipulation, promoting better maintainability and readability.
 *Code snipped:*
 
-`python
+```python
 class AppFacade:
     @staticmethod
     def perform_data_manipulation(data):
@@ -45,3 +43,12 @@ class AppFacade:
         # This could involve operations like filtering, transformation, aggregation, etc.
         pass
     ```
+
+**2. Environment Variables Usage:**These environment variables are conveniently loaded from a .env file using the python-dotenv library, providing a streamlined approach to manage application configurations and settings without hardcoding them into the source code.
+*Example snippet:*
+```python
+def getEnvironmentVariable(self, envvar: str = 'ENVIRONMENT'):
+   return self.settings[envvar]
+```
+**3. Logging:**These messages are stored in a designated file named app.log, situated within a dedicated directory called logs. The logging level is configured to INFO, ensuring that only informative messages are logged. Additionally, a customized format is specified for the log messages, enhancing readability and providing valuable insights into the application's runtime behavior.
+
