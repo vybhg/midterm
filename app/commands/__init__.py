@@ -26,6 +26,5 @@ class CommandHandler:
         except NoSuchCommandError as e:
             print(e)
 
-   
 
 
