@@ -1,0 +1,50 @@
+2024-03-29 20:51:47,535 - app - INFO - Application started.
+2024-03-29 20:51:50,200 - app - INFO - Menu command executed.
+2024-03-29 20:51:50,201 - app.plugins.menu - INFO - Menu command executed.
+2024-03-29 20:51:50,892 - app.plugins.menu - INFO - User choice: 1
+2024-03-29 20:51:50,892 - app.plugins.menu - INFO - User chose Addition
+2024-03-29 20:51:51,702 - app.plugins.menu - INFO - Addition operation performed.
+2024-03-29 20:51:55,330 - app - INFO - Menu command executed.
+2024-03-29 20:51:55,330 - app.plugins.menu - INFO - Menu command executed.
+2024-03-29 20:51:55,733 - app.plugins.menu - INFO - User choice: 2
+2024-03-29 20:51:55,733 - app.plugins.menu - INFO - User chose Subtraction
+2024-03-29 20:51:57,022 - app.plugins.menu - INFO - Subtraction operation performed.
+2024-03-29 20:51:59,226 - app - INFO - Menu command executed.
+2024-03-29 20:51:59,226 - app.plugins.menu - INFO - Menu command executed.
+2024-03-29 20:52:00,279 - app.plugins.menu - INFO - User choice: 3
+2024-03-29 20:52:00,279 - app.plugins.menu - INFO - User chose Multiplication
+2024-03-29 20:52:00,977 - app.plugins.menu - INFO - Multiplication operation performed.
+2024-03-29 20:52:03,409 - app - INFO - Menu command executed.
+2024-03-29 20:52:03,409 - app.plugins.menu - INFO - Menu command executed.
+2024-03-29 20:52:03,746 - app.plugins.menu - INFO - User choice: 4
+2024-03-29 20:52:03,746 - app.plugins.menu - INFO - User chose Division
+2024-03-29 20:52:04,652 - app.plugins.menu - INFO - Division operation performed.
+2024-03-29 20:52:06,981 - app - INFO - Menu command executed.
+2024-03-29 20:52:06,981 - app.plugins.menu - INFO - Menu command executed.
+2024-03-29 20:52:07,402 - app.plugins.menu - INFO - User choice: 5
+2024-03-29 20:52:07,402 - app.plugins.menu - INFO - User chose to display history
+2024-03-29 20:52:10,546 - app - INFO - Menu command executed.
+2024-03-29 20:52:10,547 - app.plugins.menu - INFO - Menu command executed.
+2024-03-29 20:52:13,955 - app.plugins.menu - INFO - User choice: 8
+2024-03-29 20:52:13,955 - app.plugins.menu - INFO - User chose to delete entry
+2024-03-29 20:52:19,650 - app - INFO - Menu command executed.
+2024-03-29 20:52:19,650 - app.plugins.menu - INFO - Menu command executed.
+2024-03-29 20:52:19,990 - app.plugins.menu - INFO - User choice: 5
+2024-03-29 20:52:19,990 - app.plugins.menu - INFO - User chose to display history
+2024-03-29 20:52:34,431 - app - INFO - Menu command executed.
+2024-03-29 20:52:34,431 - app.plugins.menu - INFO - Menu command executed.
+2024-03-29 20:52:35,766 - app.plugins.menu - INFO - User choice: 6
+2024-03-29 20:52:35,766 - app.plugins.menu - INFO - User chose to save history
+2024-03-29 20:52:41,522 - app - INFO - Menu command executed.
+2024-03-29 20:52:41,523 - app.plugins.menu - INFO - Menu command executed.
+2024-03-29 20:52:41,868 - app.plugins.menu - INFO - User choice: 7
+2024-03-29 20:52:41,868 - app.plugins.menu - INFO - User chose to clear history
+2024-03-29 20:52:43,172 - app.plugins.menu - INFO - History cleared.
+2024-03-29 20:52:45,096 - app - INFO - Menu command executed.
+2024-03-29 20:52:45,096 - app.plugins.menu - INFO - Menu command executed.
+2024-03-29 20:52:45,419 - app.plugins.menu - INFO - User choice: 5
+2024-03-29 20:52:45,419 - app.plugins.menu - INFO - User chose to display history
+2024-03-29 20:52:49,205 - app - INFO - Menu command executed.
+2024-03-29 20:52:49,206 - app.plugins.menu - INFO - Menu command executed.
+2024-03-29 20:52:50,137 - app.plugins.menu - INFO - User choice: 9
+2024-03-29 20:52:50,137 - app.plugins.menu - INFO - User chose to exit
