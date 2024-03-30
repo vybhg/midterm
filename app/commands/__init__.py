@@ -1,35 +1,28 @@
-import pandas as pd
+from abc import ABC, abstractmethod
 
-class CalculationHistory:
+class Command(ABC):
+    @abstractmethod
+    def execute(self):
+        pass
+
+class CommandNotFoundError(Exception):
+    pass
+
+class CommandHandler:
     def __init__(self):
-        self.history = pd.DataFrame()
+        self.commands_mapping = {}
 
-    def add_entry(self, operation, num1, num2, result):
-        new_entry = pd.DataFrame({'Operation': [operation], 'Number1': [num1], 'Number2': [num2], 'Result': [result]})
-        if self.history.empty:
-            self.history = new_entry
-        else:
-            self.history = pd.concat([self.history, new_entry], ignore_index=True)
+    def register_command(self, command_name: str, command_class):
+        self.commands_mapping[command_name] = command_class
 
-    def display_history(self):
-        print(self.history)
-
-    def save_history(self, filename):
-        if not filename.endswith('.csv'):
-            filename += '.csv'
-        self.history.to_csv(filename, index=False)
-        print(f"History saved to {filename}.")
-
-    def clear_history(self):
-        self.history = pd.DataFrame(columns=['Operation', 'Number1', 'Number2', 'Result'])
-        print("History cleared.")
-
-    def delete_entry(self, index):
+    def execute_command(self, command_name: str, *args):
         try:
-            self.history.drop(index, inplace=True)
-            print("Entry deleted.")
+            command_class = self.commands_mapping[command_name]
+            command_instance = command_class()
+            command_instance.execute(*args)
         except KeyError:
-            print("Invalid index. Entry does not exist.")
+            raise CommandNotFoundError(f"No such command: {command_name}")
+
 
 
 
