@@ -68,4 +68,4 @@ pytest --pylint  (Runs tests with pylint static code analysis)
 pytest --pylint --cov (Runs tests, pylint, and coverage to check if you have all your code tested.)
 python3 main.py 
 ```
-link for video:
+video demonstration of using the calculator:
