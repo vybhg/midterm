@@ -1,26 +1,8 @@
 # **Midterm Project.**
 
 **1. Design Patterns Used:**
-
-**a. Command Pattern:** Implemented in the Command and CommandHandler classes, providing a way to encapsulate requests as objects, allowing parameterization of clients with queues, and supporting undoable operations.
-
-*Code snipped:*
-
-```python
-from abc import ABC, abstractmethod
-class Command(ABC):
-    @abstractmethod
-    def execute(self):
-        pass
-class CommandHandler:
-    def __init__(self):
-        self.commands = {}
-    def register_command(self, command_name: str, command_class):
-        self.commands[command_name] = command_class
-    def execute_command(self, command_name: str):
-        command = self.create_command(command_name)
-        if command:
-            command.execute()
+**a. Command Pattern:** The Command Pattern encapsulates a request as an object, thereby allowing parameterization of clients with different requests, queuing, logging, and supporting undoable operations. It promotes loose coupling between the sender and receiver of a request. The classes Command, CommandHandler, and concrete command classes like AdditionCommand, SubtractionCommand, etc., demonstrate the Command Pattern.
+Here is the link to the implementation of the Command Pattern in the code: 
 ```
 **b. Factory Pattern:** Utilized in the AppFactory class to dynamically create instances of command objects based on specified packages.
 
