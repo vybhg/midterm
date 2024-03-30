@@ -4,7 +4,7 @@
 **a. Command Pattern:** The Command Pattern encapsulates a request as an object, thereby allowing parameterization of clients with different requests, queuing, logging, and supporting undoable operations. It promotes loose coupling between the sender and receiver of a request. The classes Command, CommandHandler, and concrete command classes like AdditionCommand, SubtractionCommand, etc., demonstrate the Command Pattern.
 Here is the link to the implementation of the Command Pattern in the code: https://github.com/vybhg/midterm/blob/main/app/commands/__init__.py
 ```
-**b. Factory Pattern:** Utilized in the AppFactory class to dynamically create instances of command objects based on specified packages.
+**b. Factory Pattern:** The Factory Pattern is employed within the AppFactory class to dynamically generate instances of command objects based on specified packages. This pattern abstracts the process of object creation, allowing the client code (in this case, the AppFactory) to create objects without needing to know the specific class or implementation details. By using the Factory Pattern, the code gains flexibility and extensibility, as new command objects can be added or modified without directly modifying the client code.
 
 *Code snipped:*
 ```python
